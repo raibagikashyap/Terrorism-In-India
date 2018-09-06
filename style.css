@@ -1,0 +1,135 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Calibri;
+}
+
+body {
+  background-color: #141311;
+}
+
+h1 {
+  font-family: Georgia;
+  font-size: 3rem;
+  text-align: center;
+  margin: 10px;
+  color: white;
+}
+
+h2 {
+  font-family: Georgia;
+  font-size: 25px;
+  margin: auto;
+  margin-bottom: 5vh;
+  text-align: justify;
+  width: 50%;
+  color: white;
+}
+
+p {
+  font-size: 17.5px;
+  margin: auto;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  text-align: justify;
+  width: 50%;
+  color: white;
+  font-family: Georgia;
+  line-height: 1.6;
+}
+
+.dataviz {
+  margin: auto;
+  width: 55%;
+  align-items: center;
+}
+
+.disclaimer{
+  margin: auto;
+  width: 50%;
+  align-items: center;
+  text-align: center;
+  font-family: Georgia;
+  font-style: italic;
+  margin-top: 5vh;
+  font-size: 15px;
+}
+
+.note{
+  margin: auto;
+  width: 50%;
+  align-items: justify;
+  font-family: Georgia;
+  font-style: italic;
+  margin-bottom: 5vh;
+  font-size: 12px;
+}
+
+.note2{
+  margin-top: 5vh;
+}
+
+a{
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px white dotted;
+}
+
+.firstpageimage{
+  margin: auto;
+  width: 30%;
+  height: 40vh;
+  display: block;
+  align-items: center;
+  margin-top: 1px;
+}
+
+#firstpageimage{
+  margin: auto;
+  display: block;
+  align-items: center;
+  width: 30%;
+}
+
+#calendar{
+  margin: auto;
+  align-items: center;
+  width: 40%;
+}
+
+.table{
+  width: 50%;
+  border: 1px solid white;
+  margin: auto;
+}
+
+th{
+  color: #fff;
+  border: 1px solid white;
+}
+/***************************************Media 1300********************************************/
+
+@media (max-width: 1200px) {
+  h2 {
+    width: 95%;
+  }
+  p {
+    width: 95%;
+  }
+  .disclaimer {
+    width: 95%;
+  }
+  .note {
+    width: 95%;
+  }
+  .dataviz {
+    width: 70%;
+  }
+  .table {
+    width: 70%;
+  }
+  #firstpageimage{
+    width: 80%
+  }
+}

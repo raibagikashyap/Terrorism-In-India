@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Where and How</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+  <script src="http://d3js.org/topojson.v3.min.js"></script>
+  <script src="https://d3js.org/d3-hierarchy.v1.min.js"></script>
+  <script src="https://d3js.org/colorbrewer.v1.min.js"></script>
+  <style>
+    .bartitle {
+      font-size: 20px;
+      fill: #fff;
+    }
+
+    .subtitle {
+      font-size: 17px;
+      fill: #fff;
+    }
+
+    .chartdisclaimer {
+      font-size: 10px;
+      fill: #fff;
+      font-style: italic;
+    }
+
+    .axistitle {
+      font-size: 15px;
+      fill: #fff;
+    }
+
+    .tooltip {
+      position: absolute;
+      text-align: center;
+      width: 60px;
+      height: 28px;
+      padding: 2px;
+      font-size: 10px;
+      fill: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>India has three types of terrorists that are active</h2>
+
+
+  <div id="container3" class="container">
+
+    <p>Forty-five percent of the total terrorist incidents, in the current decade in India, where carried out by <a href="https://www.aljazeera.com/indepth/features/2017/04/india-maoist-rebels-explainer-170426132812114.html">Left-wing extremists</a>, which
+      are mainly active in the central and eastern India.</p>
+    <p>India witnessed a total of 6,348 terrorist incidents in the 2010s (of which the terrorist organization and its type were known only for 4,181). Out of the total, 2,826 attacks were carried out by Left-wing Extremists, according to the <a href="https://www.start.umd.edu/gtd/">Global Terrorism Database (GTD)</a>.</p>
+    <p>The Red Corridor, as it is called, is a region in the Central and Eastern India that is experiencing a considerable amount of Maoist insurgency. The GTD suggests that Left-wing Extremism is one of the biggest internal security threats faced by the
+      country in the current decade. In 2017 alone, there were 339 terrorist attacks by the Left-wing extremists.</p>
+    <p>The Maoist insurgency is particularly a threat in the states of Chhattisgarh, Jharkhand, Bihar, West Bengal, Maharashtra, Orissa and Andhra Pradesh (Telangana was included in this list as it was a part of Andhra Pradesh until 2014). More than 95%
+      percent of the Maoist terrorist incidents, in this decade, were in these eight states.</p>
+    <p>According to an <a href="https://www.cfr.org/backgrounder/terror-groups-india">article</a> by the <a href="https://www.cfr.org/about">Council on Foreign Relations</a>, these left-wing extremists (called as the Naxalites), originally came from the
+      village of Naxalbari in West Bengal where they first staged an uprising in 1967. India nearly wiped out the movement during counterinsurgency efforts in the 1970s that left the group broken into smaller factions, including the People’s War Group
+      and Maoist Communist Center.</p>
+    <p>In 2004, these two groups aligned to form the <a href="http://www.satp.org/satporgtp/countries/india/terroristoutfits/cpi_m.htm">Communist Party of India (Maoist)</a>. The group, now made up of a loose coalition of factions, challenges state power
+      with violence to support its stated goal of helping the landless poor, tribal people, and lower castes.</p>
+    <p>“It’s not the legal system’s failure, it is the government’s failure that it began. It was exploitation of Adivasis in this region by the forest department.”, says <a href="https://feminisminindia.com/2016/12/19/interview-isha-khandelwal-jagdalpur-legal-aid-bastar/">Isha Khandelwal</a>      who runs the Jagdalpur Legal Aid, a non-profit organization providing legal services in Bastar. “There was a lack of government structure entirely that also resulted in riots. Because the area has been far neglected and focused only on in terms
+      of the development model for the country and not really focused for the betterment of the people in any way.”</p>
+    <p>The <a href="http://www.jaglag.org/about-us/">Jagdalpur Legal Aid Group (JagLAG)</a> is a group of three women lawyers who seek to provide legal assistance to the economically and socially disadvantaged groups in Bastar, which is a town in the South
+      of the state of Chhattisgarh and is a hotbed of Maoist activities.</p>
+    <p>“It’s a very long debate in general if for anything an armed struggle is justified or not.” said Ms. Khandelwal, “Justified or not it has been a legitimate people’s movement.</p>
+    <p>“We always call Naxalites as something as victim alien people who have suddenly come and have started doing this. Everybody is your citizen. The majority people in Bastar are Adivasis who have taken up arms. If you don’t notice this from that angle
+      then you will always treat it as outsiders creating this unrest in the country, which is not true, these are not outsiders.”</p>
+    <p>Ms. Khandelwal blames the “development model” adopted by not just this government but also the previous one. “I am not just talking about the current government but also the previous government. Either the Congress or the BJP, there has been no difference
+      on how they have treated Bastar. The development model more or less has been the same, on the exploitation of resources in these areas and nobody has really cared for the people</p>
+    <p>“Unless you talk to people and unless you have a better development model that includes everybody and is much more inclusive of the population even at the cost of whom you are trying to build the development model, people are always going to protest
+      in some way or the other.”</p>
+
+    <div id="treemap" class="dataviz">
+
+    </div>
+
+    <p><a href="http://www.claws.in/">Centre for Land Warfare Studies (CLAWS)</a>, which is an autonomous think tank on strategic studies and land warfare in the Indian context, summarized a <a href="http://www.claws.in/images/events/pdf/1068184357_Executive_Summary_and_Detailed_Report_-_Terrorism_in_India_(1).pdf">report</a>      about Terrorism in India after a seminar on Challenges to Statecraft in Non-Military Realm on 13th July 2016.</p>
+    <p><a href="http://ramachandraguha.in/">Dr. Ramachandra Guha</a>, who is a historian and author of many books including ‘India after Gandhi’ wrote the inaugural speech. The report summarizes Dr. Guha’s inaugural speech.</p>
+    <p>“In the Indian context, since 1947, terrorism has manifested into three conceptually distinct types of terrorist violence. First is associated with the Left-Wing Extremism (LWE); second, has been historically associated with nationalist or sub-nationalist
+      movements on India’s border areas – the Naga, Mizo, Assam, and Manipur insurgencies; and third, religious-inspired terrorism, which is consonant with the global perspective where the use of violence for political and nationalist aims is complemented
+      by religious aims.”</p>
+    <p class="note note2">Note: The classification of type of the terrorist organization was not available in the Global Terrorism Database. The type has been added by investigating valid sources and a dataset which contains the organization names, the type and the link has
+      been created which can be downloaded <a href="https://docs.google.com/spreadsheets/d/1TUwcLB47DxGt9mMBlPlzp2KAnN7rrqsVrqGs9db2y1I/edit?usp=sharing">here</a></p>
+
+  </div>
+
+  <!-- ********************************************************************************** -->
+
+  <div id="container4" class="container">
+
+    <p>The people from the north-eastern states of India which is made up of the ‘seven sisters’ states, namely, Assam, Arunachal Pradesh, Meghalaya, Mizoram, Manipur, Nagaland and Tripura and also Sikkim, have been host to a huge number of armed conflicts
+      for decades.</p>
+    <p>Many of these conflicts, with distinct aims and objectives, have persisted despite the intervention of state and civil society. Dialogue with militant outfits has had very less success in achieving ceasefires in this region.</p>
+    <p>“Insurgency in the <a href="http://cdpsindia.org/nagaland_insurgency.asp">Nagaland</a> has been described as the ‘mother of all insurgent movements’ in the North East”, writes <a href="https://www.eurasiareview.com/author/dr-bibhu-prasad-routray/">Dr. Bhibhu Prasad Routray</a>,
+      in the book Armed Conflicts in South Asia, “The Naga insurgency has been a harbinger of several conflicts in each of the seven states.</p>
+    <p>“The Naga separatist movement, which had begun before Independence, is based on the premise that Nagas have been historically independent and unconquered by anyone and therefore India has no right to subjugate them.”</p>
+    <p>Not given the Independence, the Nagas formed the Naga National Council (NNC). Some NNC members rebelled against the accord and formed Nationalist Socialist Council of Nagaland (NSCN) which later again, was divided into two factions - <a href="http://www.satp.org/satporgtp/countries/india/states/nagaland/terrorist_outfits/nscn_im.htm">NSCN-IM (Isak Muivah faction)</a>      and <a href="http://www.satp.org/satporgtp/countries/india/states/nagaland/terrorist_outfits/nscn_k.htm">NSCN-K (Khaplang faction)</a>.</p>
+    <p>The insurgency in <a href="http://cdpsindia.org/assam_insurgency.asp">Assam</a> started in 1979, as the <a href="http://www.satp.org/satporgtp/countries/india/states/assam/terrorist_outfits/ulfa.htm">United Liberation Front of Assam (ULFA)</a> was
+      formed with the objective of a sovereign socialist Assam, that is free from the ‘colonial exploitation of India’ as well as halting the flow of illegal migrants from Bangladesh.</p>
+    <p>“However, ULFA transformed itself into a terrorist outfit, targeting civilians and security forces”, writes Mr. Routray, who has served as the Deputy Director in the National Security Council Secretariat, Government of India.</p>
+    <p>The ULFA is not the lone insurgent outfit in Assam. In the 1980s, the largest plains tribe in the state, Bodo, initiated an insurgency on issues like dispossession of their tribal lands by Bengali and Assamese settlers, and apathy shown to the Bodo
+      language and culture. In 1988, the <a href="http://www.satp.org/satporgtp/countries/india/states/assam/terrorist_outfits/ndfb.htm">National Democratic Front of Bodoland (NDFB)</a> emerged with specific objectives of an independent Bodo country.</p>
+    <p>The <a href="http://www.satp.org/satporgtp/countries/india/states/meghalaya/terrorist_outfits/gnla.htm">Garo National Liberation Army (GNLA)</a> was formed in 2009. Since its formation, the GNLA has been involved in the killing, abduction, extortion,
+      bomb blasts and attacks on Security Forces (SFs). In the current situation, the State Government is still examining the activities of the outfit before declaring it an outlawed group, according to the <a href="http://www.satp.org/">South Asian Terrorism Portal (SATP)</a>.
+      The GNLA is fighting for a 'sovereign Garoland' in the Western areas of <a href="http://cdpsindia.org/meghalaya_insurgency.asp"></a>Meghalaya.</p>
+    <p>The <a href="http://www.satp.org/satporgtp/countries/india/states/manipur/terrorist_outfits/pla.htm">People’s Liberation Army (PLA)</a> was established under the leadership of N. Bisheswar Singh on September 25, 1978. According to the SATP, the PLA
+      aims to organize a revolutionary front covering the entire Northeast and unite all ethnic groups, to liberate <a href="http://cdpsindia.org/manipur_insurgency.asp">Manipur</a>.</p>
+    <p>Since 2010, the north-eastern states of India have witnessed a total of 982 terrorist incidents from organizations that are involved in nationalist or sub-nationalist movements. The highest number of incidents of these have been in Assam followed
+      by Manipur and Meghalaya. More than 80% of the incidents were in these three states.</p>
+    <p>In this decade, the GNLA was responsible for the highest number of terrorist incidents for a nationalist motive. One hundred and sixty of the 166 attacks by GNLA were in Meghalaya.</p>
+    <p>The United Liberation Front of Assam (ULFA) and National Democratic Front of Bodoland (NDFB) have been responsible for more than 100 incidents each in Assam, since 2010.</p>
+    <p>The People's Liberation Army (India) was responsible for 73 terrorist attacks in the current decade, 69 of which were in Manipur.</p>
+
+    <div id="heatmap" class="dataviz">
+
+    </div>
+
+    <p>The <a href="https://indianexpress.com/article/26-11/timeline/2611-mumbai-terror-attacks-heres-what-happened-at-taj-mahal-hotel-trident-oberoi-nariman-house/">terrorist attacks of 26/11</a> are still fresh in the memory of Indians. On 26th November,
+      2008 ten members of an Islamic terrorist organization based in Pakistan, carried out a series of coordinated shooting and bombing attacks lasting four days across Mumbai. The attacks were claimed by a then unknown terrorist organization, Deccan
+      Mujahideen.
+    </p>
+    <p>Overall, in India there have been 330 terrorist attacks by organizations that are religiously inspired by Islam. There are several such organizations that have been responsible for terrorist events in several places in India, but the major active
+      zone for Islamic Terrorism, mainly carried out for nationalist and political motives, is the state of Jammu and Kashmir.</p>
+    <p>Kashmir has always been a <a href="https://www.telegraph.co.uk/news/1399992/A-brief-history-of-the-Kashmir-conflict.html">disputed state</a> since India and Pakistan won independence in 1947.</p>
+    <p>In this decade, the organizations with the maximum number of terrorist incidents in Kashmir were <a href="http://www.satp.org/satporgtp/countries/india/states/jandk/terrorist_outfits/hizbul_mujahideen.htm">Hizbul Mujahideen (HM)</a> and <a href="http://www.satp.org/satporgtp/countries/india/states/jandk/terrorist_outfits/lashkar_e_toiba.htm">Lashkar-e-Taiba (LeT)</a>.
+      Since 2010, HM and LeT together have been responsible for 197 terrorist attacks in Kashmir.</p>
+    <p>According to the SATP, Hizbul Mujahideen came into being in the Kashmir Valley in September 1989 with Master Ahsan Dar as its chief. Dar was later arrested by security forces in mid-December 1993. It was reportedly formed as the militant wing of the
+      Jamaat-e-Islami (JeI), an Islamist organization.</p>
+    <p>The Jamaat-e-Islami is reported to have set up the Hizb at the behest of the <a href="https://www.theguardian.com/world/2002/may/25/pakistan.india">Inter-Services Intelligence (ISI)</a>, Pakistan’s external intelligence agency, to counter the Jammu
+      and Kashmir Liberation Front (JKLF), which had advocated complete independence of the State. Many of the early Hizb cadres were former JKLF members.</p>
+    <p>The LeT’s professed ideology goes beyond merely challenging India's sovereignty over the State of Jammu and Kashmir. The Lashkar's ‘agenda’, as outlined in a pamphlet titled, ‘Why are we waging jihad’ includes the restoration of Islamic rule over
+      all parts of India. Further, the outfit seeks to bring about a union of all Muslim majority regions in countries that surround Pakistan.</p>
+    <p>These organizations are still active and also gain sympathy from the locals. For example, the killing of <a href="https://www.deccanchronicle.com/nation/in-other-news/070816/burhan-wanis-father-new-face-of-kashmir-unrest-offers-only-daughter-for-azaadi.html">Burhan Wani</a>      got 50,000 people rallying in support of him.</p>
+    <p>Even though the number of terrorist incidents, inspired by Islamic religious motives in Kashmir, is less as compared to the other two, <a href="http://www.rediff.com/news/interview/the-general-in-charge-of-the-surgical-strikes/20170926.htm">Lt. Gen DS Hooda</a>      who is the former General Officer Commanding-in-Chief of the Indian army’s Northern Command, thinks it is more of a threat to the 'idea of India'.</p>
+    <p>He said, "I think we should not look merely at numbers but the impact of the threat on the nation. Left-wing Extremism and the movements in the Northeast do not really pose a danger to the idea of India. Because Pakistan is in the mix and wants to
+      integrate J&K into its country, the sensitivities are much greater. Also, the happenings in Kashmir could have an impact on the psyche of Muslims in the rest of India, therefore posing a greater long-term risk."</p>
+    <p>There are a few right-wing organizations that are taking extreme measures for the sole purpose of establishing a Hindu state in India where Hindus will have superiority over other communities. The likes of <a href="https://www.encyclopedia.com/politics/legal-and-political-magazines/vishwa-hindu-parishad-vhp">Vishwa Hindu Parishad</a>      and <a href="https://www.bbc.co.uk/news/world-asia-india-29593336">Rashtriya Swayamsevak Sangha</a> have been involved in several violent incidents to propagate extremist Hindutva agendas.</p>
+    <p>There have been more than 30 terrorist incidents in India which have been religiously inspired by Hindu extremists, since 2010, as violence by Hindu right-wing organizations shows a rise.</p>
+
+
+    <p class='disclaimer'>This is the third article of the four-part series. You can read the first part <a href="whatandwhen.html">here</a>, the second part <a href="deathsperincident.html">here </a> and fourth part <a href="sowhatnowwhat.html">here</a>.</p>
+    <p class='disclaimer'>Click <a href="index.html">here</a> to go to the home page</p>
+  </div>
+
+  <!-- Call javascript codes -->
+  <script type="text/javascript" src="heatmap.js"></script>
+  <script type="text/javascript" src="treemap.js"></script>
+
+</body>
+
+</html>

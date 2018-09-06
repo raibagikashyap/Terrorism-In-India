@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Terrorism in India</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+  <script src="http://d3js.org/topojson.v3.min.js"></script>
+  <script src="https://d3js.org/d3-hierarchy.v1.min.js"></script>
+  <script src="https://d3js.org/colorbrewer.v1.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.js'></script>
+  <style>
+    .line {
+      fill: none;
+    }
+
+    .bartitle {
+      font-size: 20px;
+      font-family: Georgia;
+    }
+
+    .scale {
+      font-size: 2px;
+      font-family: Georgia;
+    }
+
+    .grid line {
+      stroke: #fff;
+      stroke-opacity: 0.7;
+      shape-rendering: crispEdges;
+    }
+
+    .grid path {
+      stroke-width: 0;
+    }
+
+    .axis {
+      stroke: #fff;
+    }
+
+    .axis text {
+      fill: #fff;
+    }
+
+    .label {
+      fill: #fff;
+    }
+
+    #sections>div {
+      opacity: .3
+    }
+
+    #sections div.graph-scroll-active {
+      opacity: 1;
+    }
+
+    .lineworld {
+      stroke: #fff;
+    }
+
+    /* Heat Map Styling */
+
+    path {
+      stroke: white;
+      stroke-width: 0.5px;
+      fill: grey;
+    }
+
+    /*Treemap Styling*/
+
+    .node {
+      box-sizing: border-box;
+      line-height: 1em;
+      overflow: hidden;
+      position: absolute;
+      white-space: pre;
+      background: #ddd;
+    }
+
+    .node-label,
+    .node-value {
+      margin: 4px;
+    }
+
+    .node-value {
+      margin-top: -2px;
+    }
+
+    .node-value {
+      font-weight: bold;
+    }
+
+    .focus circle {
+      fill: #F1F3F3;
+      stroke: #6F257F;
+      stroke-width: 5px;
+    }
+
+    .overlay {
+      fill: none;
+      pointer-events: all;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Terrorism In India</h1>
+  <img src="communist_flag.jpg" alt="Image Not Available" id='firstpageimage'>
+  <p>This website tries to tell the story of Terrorism in India through medium of numbers. The story has been divided into four parts </p>
+  <p>The <a href="whatandwhen.html"> first article</a> tries to tell us what is status of terrorism in India and where does the nation stand as compared to other countries in this aspect.</p>
+  <p>The <a href="deathsperincident.html"> second article</a> explains why inspite of the number of incidences being high in India, the number of people killed in total is less as compared to other countries</p>
+  <p>The <a href="whereandhow.html">third article</a> explains the different types of terrorism in the Indian context and which are a major threat in the current decade. It tries to explain in which part of India these different types of terrorists are active
+  </p>
+  <p>The <a href="sowhatnowwhat.html">fourth article</a> tries to analyze the current situation and what the current government is doing about the situation. It tries to understand what experts have to say about the current situation.</p>
+</body>
+
+</html>
