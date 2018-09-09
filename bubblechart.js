@@ -15,9 +15,9 @@
     .range([height, 0])
     .domain([0, 1000]);
 
-  var graphtitle = "Death to Incident Ratio",
+  var graphtitle = "State-wise Death to Incident Ratio in the 2010s",
     xtitle = "Events"
-  ytitle = "Deaths";
+    ytitle = "Deaths";
 
   var svg = d3.select("#bubble").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -115,7 +115,7 @@
     .append('text')
     .attr('fill', '#fff')
     .attr('class', 'bartitle')
-    .text("Death To Incident Ratio")
+    .text("State-wise Death to Incident Ratio in the 2010s")
     .attr("transform", "translate(110, 20)")
 
   svg.append("g")
@@ -126,9 +126,9 @@
 
   svg.append("g")
     .append("text")
-    .text("Events")
+    .text("Incidents")
     .attr("class", "axistitle")
-    .attr("transform", "translate(360,465)")
+    .attr("transform", "translate(365,465)")
 
   svg.append("g")
     .append("text")

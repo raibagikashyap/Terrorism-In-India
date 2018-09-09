@@ -118,7 +118,7 @@
       .append('text')
       .text("*Hover/Tap over the bar to see the value")
       .attr("class", "chartdisclaimer")
-      .attr("transform", "translate(95,500)")
+      .attr("transform", "translate(95,495)")
 
     svg.append("g")
       .attr("transform", "translate(" +margin.left+ "," + (height + 90) + ")")

@@ -2,7 +2,7 @@
 
   var margin = {
       top: 75,
-      right: 0,
+      right: 55,
       bottom: 55,
       left: 140
     },
@@ -14,7 +14,7 @@
   var y = d3.scaleLinear()
     .range([height, 0]);
 
-  var graphtitle = "Year-Wise Number of Terrorist Incidents in India"
+  var graphtitle = "Year-Wise Terrorist Incidents in India"
 
   var parseTime = d3.timeParse("%Y");
 

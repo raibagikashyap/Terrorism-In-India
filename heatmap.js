@@ -119,7 +119,7 @@
 
   svg.append('g')
     .append('text')
-    .text('The attacks have been included since 2010, hence Telengana which seperated from Andhra Pradesh in 2014, as of today, has not been shown as a seperate state.')
+    .text('The attacks have been included since 2010, hence Telengana which seperated from Andhra Pradesh in 2014, has not been shown as a seperate state.')
     .attr('class', 'chartdisclaimer')
     .attr('transform', 'translate(50, 622)');
 

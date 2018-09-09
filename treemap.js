@@ -92,15 +92,15 @@
         var xPos = d3.mouse(this)[0];
         var yPos = d3.mouse(this)[1] + 20;
         console.log(xPos);
-        if (xPos > 400) {
-          xPos = d3.mouse(this)[0] - 200
-        } else {
-          xPos = d3.mouse(this)[1] + 100
+        if (xPos > 400 && xPos<500) {
+          xPos = d3.mouse(this)[0] - 20
+        } else if (xPos > 499){
+          xPos = d3.mouse(this)[0] - 150
         }
         tooltip.attr("transform", "translate(" + xPos + "," + yPos + ")");
         console.log(i);
         console.log(d);
-        tooltip.select("text").text(d.data.key + ": " + d.data.value)
+        tooltip.select("text").text(d.data.key)
       });
 
     node.append("text")
@@ -141,14 +141,14 @@
     .attr("transform", "translate(40,45)")
 
   svg.append("text")
-    .text("*Tap/Hover over a area to know the organization name and the number of terroist attacks it was responsible for")
+    .text("*Tap/Hover over a area to know the organization name")
     .attr("class", "chartdisclaimer")
     .attr("transform", "translate(40,490)")
 
-    svg.append("text")
-      .text("Note: There are 2,127 terrorist attacks for which the organization responsible is uknown. They have not been included in this tree map")
-      .attr("class", "chartdisclaimer")
-      .attr("transform", "translate(40,510)")
+  svg.append("text")
+    .text("Note: There are 2,127 terrorist attacks for which the organization responsible is uknown. They have not been included in this tree map")
+    .attr("class", "chartdisclaimer")
+    .attr("transform", "translate(40,510)")
 
   var legend = svg.selectAll(".legend")
     .data(["LWE", "Nationalist", "Islamic", "Hindu", "Sikh"])

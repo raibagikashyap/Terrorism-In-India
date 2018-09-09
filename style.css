@@ -23,7 +23,7 @@ h2 {
   margin: auto;
   margin-bottom: 5vh;
   text-align: justify;
-  width: 50%;
+  width: 60%;
   color: white;
 }
 
@@ -33,19 +33,21 @@ p {
   margin-top: 2vh;
   margin-bottom: 2vh;
   text-align: justify;
-  width: 50%;
+  width: 60%;
   color: white;
   font-family: Georgia;
   line-height: 1.6;
 }
 
 .dataviz {
-  margin: auto;
-  width: 55%;
   align-items: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55%;
 }
 
-.disclaimer{
+.disclaimer {
   margin: auto;
   width: 50%;
   align-items: center;
@@ -56,7 +58,7 @@ p {
   font-size: 15px;
 }
 
-.note{
+.note {
   margin: auto;
   width: 50%;
   align-items: justify;
@@ -66,17 +68,17 @@ p {
   font-size: 12px;
 }
 
-.note2{
+.note2 {
   margin-top: 5vh;
 }
 
-a{
+a {
   color: #fff;
   text-decoration: none;
   border-bottom: 1px white dotted;
 }
 
-.firstpageimage{
+.firstpageimage {
   margin: auto;
   width: 30%;
   height: 40vh;
@@ -85,29 +87,30 @@ a{
   margin-top: 1px;
 }
 
-#firstpageimage{
+#firstpageimage {
   margin: auto;
   display: block;
   align-items: center;
   width: 30%;
 }
 
-#calendar{
+#calendar {
   margin: auto;
   align-items: center;
-  width: 40%;
+  width: 35%;
 }
 
-.table{
+.table {
   width: 50%;
   border: 1px solid white;
   margin: auto;
 }
 
-th{
+th {
   color: #fff;
   border: 1px solid white;
 }
+
 /***************************************Media 1300********************************************/
 
 @media (max-width: 1200px) {
@@ -124,12 +127,15 @@ th{
     width: 95%;
   }
   .dataviz {
-    width: 70%;
+    width: 80%;
+  }
+  #calendar {
+    width: 50%;
   }
   .table {
     width: 70%;
   }
-  #firstpageimage{
+  #firstpageimage {
     width: 80%
   }
 }

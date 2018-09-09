@@ -285,7 +285,7 @@
 
   svg.append("g")
     .append('text')
-    .text("Deaths per Terrorist Incidences in India")
+    .text("Deaths per Terrorist Incidents in India")
     .attr('class', 'bartitle')
     .attr("transform", "translate(95, 20)")
 
@@ -309,7 +309,7 @@
 
   svg.append("g")
     .append("text")
-    .text("Events | Deaths")
+    .text("Incidents | Deaths")
     .attr("class", "axistitle")
     .attr("transform", "translate(90,270) rotate(-90)")
 
